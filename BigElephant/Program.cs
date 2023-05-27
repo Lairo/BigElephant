@@ -10,6 +10,16 @@ namespace BigElephant
     {
         static void Main(string[] args)
         {
+
+            int i = 0;
+
+            while (i < 2)
+            {
+                Console.WriteLine(i);
+                i += 1;
+                break;
+            }
+
         }
     }
 }
