@@ -10,16 +10,42 @@ namespace BigElephant
     {
         static void Main(string[] args)
         {
+            Elephant lucinda = new Elephant() { Name = "Lucinda", EarSize = 33 };
+            Elephant lloyd = new Elephant() { Name = "Lloyd", EarSize = 40 };
+            Elephant dummy = new Elephant() { Name = "no", EarSize = 0};
 
-            int i = 0;
-
-            while (i < 2)
+            while (true)
             {
-                Console.WriteLine(i);
-                i += 1;
-                break;
+                Console.WriteLine("Press 1 for Lloyd, 2 for Lucinda, 3 to swap");
+                string choice = Console.ReadLine();
+                if (choice == "") return;
+                if (int.TryParse(choice, out int num))
+                {
+                    if(num == 1)
+                    {
+                        lucinda.WhoAmI();
+                    }
+                    else if(num == 2)
+                    {
+                        lloyd.WhoAmI();
+
+                    } else if (num == 3)
+                    {
+                        Swap();
+                        
+                    }
+
+                }
             }
 
+
+        }
+
+        public void Swap()
+        {
+            dummy = lucinda;
+            lloyd = lucinda;
+            lloyd = dummy;
         }
     }
 }
