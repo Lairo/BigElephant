@@ -23,29 +23,35 @@ namespace BigElephant
                 {
                     if(num == 1)
                     {
-                        lucinda.WhoAmI();
+                        Console.WriteLine("You have pressed 1");
+                        Console.WriteLine("Calling lloyd.WhoAmI\n");
+                        lloyd.WhoAmI();
                     }
                     else if(num == 2)
                     {
-                        lloyd.WhoAmI();
+                        Console.WriteLine("You have pressed 2");
+                        Console.WriteLine("Calling lucinda.WhoAmI()\n");
+                        lucinda.WhoAmI();
 
                     } else if (num == 3)
                     {
                         Swap();
-                        
+                        Console.WriteLine("You have pressed 3");
+                        Console.WriteLine("References have been swapped\n");
                     }
 
                 }
             }
 
+            void Swap()
+            {
+                dummy = lloyd;
+                lloyd = lucinda;
+                lucinda = dummy;
+            }
 
         }
+        
 
-        public void Swap()
-        {
-            dummy = lucinda;
-            lloyd = lucinda;
-            lloyd = dummy;
-        }
     }
 }
