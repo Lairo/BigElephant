@@ -38,7 +38,13 @@ namespace BigElephant
                         Swap();
                         Console.WriteLine("You have pressed 3");
                         Console.WriteLine("References have been swapped\n");
+                    }else if (num == 4)
+                    {
+                        lloyd = lucinda;
+                        lloyd.EarSize = 4321;
+                        lloyd.WhoAmI();
                     }
+
 
                 }
             }
